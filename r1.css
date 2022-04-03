@@ -1,0 +1,243 @@
+.container {  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-rows: repeat(6, 1fr);
+
+  grid-auto-rows: 1fr 1fr;
+
+  gap: 0px 0px;
+
+  grid-auto-flow: row;
+
+  justify-content: stretch;
+
+  align-content: stretch;
+
+  justify-items: stretch;
+
+  align-items: stretch;
+
+  grid-template-areas:
+
+    "标题 标题 标题 标题"
+
+    "左 中间 中间 右"
+
+    "左 中间 中间 右"
+
+    "左 中间 中间 右"
+
+    "左 中间 中间 右"
+
+    "底部 底部 底部 底部";
+
+}
+
+.标题 {  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-rows: repeat(3, 1fr);
+
+  gap: 0px 0px;
+
+  grid-auto-flow: row;
+
+  grid-template-areas:
+
+    "徽标 . ."
+
+    "徽标 标题文字 标题文字"
+
+    "徽标 . .";
+
+  grid-area: 标题;
+
+}
+
+.徽标 { grid-area: 徽标; }
+
+.标题文字 { grid-area: 标题文字; }
+
+.底部 { grid-area: 底部; }
+
+.中间 {  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-rows: repeat(3, 1fr);
+
+  grid-auto-columns: auto;
+
+  gap: 0px 0px;
+
+  grid-auto-flow: row;
+
+  grid-template-areas:
+
+    "中1 中1 中1"
+
+    "中2 中2 中2"
+
+    "中3 中3 中3";
+
+  grid-area: 中间;
+
+}
+
+.中1 { grid-area: 中1; }
+
+.中2 { grid-area: 中2; }
+
+.中3 { grid-area: 中3; }
+
+.左 { grid-area: 左; }
+
+.右 { grid-area: 右; }
+
+@media all and (-ms-high-contrast:none) {
+
+  .container {
+
+    display: -ms-grid;
+
+    -ms-grid-columns: repeat(4, 1fr);
+
+    -ms-grid-rows: repeat(6, 1fr);
+
+  }
+
+  .标题 {
+
+    display: -ms-grid;
+
+    -ms-grid-columns: repeat(3, 1fr);
+
+    -ms-grid-rows: repeat(3, 1fr);
+
+    -ms-grid-row: 1;
+
+    -ms-grid-row-span: 1;
+
+    -ms-grid-column: 1;
+
+    -ms-grid-column-span: 4;
+
+  }
+
+  .徽标 {
+
+    -ms-grid-row: 1;
+
+    -ms-grid-row-span: 3;
+
+    -ms-grid-column: 1;
+
+    -ms-grid-column-span: 1;
+
+  }
+
+  .标题文字 {
+
+    -ms-grid-row: 2;
+
+    -ms-grid-row-span: 1;
+
+    -ms-grid-column: 2;
+
+    -ms-grid-column-span: 2;
+
+  }
+
+  .底部 {
+
+    -ms-grid-row: 6;
+
+    -ms-grid-row-span: 1;
+
+    -ms-grid-column: 1;
+
+    -ms-grid-column-span: 4;
+
+  }
+
+  .中间 {
+
+    display: -ms-grid;
+
+    -ms-grid-columns: repeat(3, 1fr);
+
+    -ms-grid-rows: repeat(3, 1fr);
+
+    -ms-grid-row: 2;
+
+    -ms-grid-row-span: 4;
+
+    -ms-grid-column: 2;
+
+    -ms-grid-column-span: 2;
+
+  }
+
+  .中1 {
+
+    -ms-grid-row: 1;
+
+    -ms-grid-row-span: 1;
+
+    -ms-grid-column: 1;
+
+    -ms-grid-column-span: 3;
+
+  }
+
+  .中2 {
+
+    -ms-grid-row: 2;
+
+    -ms-grid-row-span: 1;
+
+    -ms-grid-column: 1;
+
+    -ms-grid-column-span: 3;
+
+  }
+
+  .中3 {
+
+    -ms-grid-row: 3;
+
+    -ms-grid-row-span: 1;
+
+    -ms-grid-column: 1;
+
+    -ms-grid-column-span: 3;
+
+  }
+
+  .左 {
+
+    -ms-grid-row: 2;
+
+    -ms-grid-row-span: 4;
+
+    -ms-grid-column: 1;
+
+    -ms-grid-column-span: 1;
+
+  }
+
+  .右 {
+
+    -ms-grid-row: 2;
+
+    -ms-grid-row-span: 4;
+
+    -ms-grid-column: 4;
+
+    -ms-grid-column-span: 1;
+
+  }
+
+}
